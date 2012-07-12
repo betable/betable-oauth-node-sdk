@@ -20,7 +20,7 @@ Usage
 
     betable.authorize( res, state )
 
-`state` is optional but recommended.  Provide a string you plan to use below to ensure the player who begins the OAuth protocol is the same one that is redirected back in the next step. When the redirect uri is called back, we will provide the same `state` that you passed in, so be sure to make sure that they match.
+`state` is optional but recommended.  Provide a string you plan to use below to ensure the player who begins the OAuth protocol is the same one that is redirected back in the next step. When the player is redirected back, we will provide the same `state` that you passed in so you can verify that they match.
 
 **When the player is redirected back to your redirect URI, complete the OAuth protocol to produce an access token**:
 
