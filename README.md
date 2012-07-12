@@ -10,7 +10,7 @@ Usage
 
 **Configure the Betable OAuth Node SDK**:
 
-    var betable = require('betable-sdk')({
+    var betable = require('betable-oauth-node-sdk')({
         apiKey      : 'YOUR_CLIENT_ID'
       , apiSecret   : 'YOUR_CLIENT_SECRET'
       , redirectUri : 'YOUR_REDIRECT_URI'
