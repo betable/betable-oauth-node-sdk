@@ -1,4 +1,3 @@
-
 Betable OAuth Node SDK
 =====================
 
@@ -48,36 +47,36 @@ Usage
 **Get the player's account, which includes their first and last name**:
 
     Betable.account( accessToken, function( response ) {
-    #
-    # response:
-    #
-    #     {
-    #         "id": "A4n7V5UL3gKx8ms2"
-    #       , "first_name": "Charles"
-    #       , "last_name": "Fey"
-    #     }
-    #
+    //
+    // response:
+    //
+    //     {
+    //         "id": "A4n7V5UL3gKx8ms2"
+    //       , "first_name": "Charles"
+    //       , "last_name": "Fey"
+    //    }
+    //
     })
 
 **Get the player's wallet, which includes their real-money balance**:
 
     Betable.wallet( accessToken, function( response ) {
-    #
-    # response:
-    #
-    #     {
-    #       , "real": {
-    #             "balance": "0.00"
-    #           , "currency": "GBP"
-    #           , "economy": "real"
-    #         }
-    #       , "sandbox": {
-    #             "balance": "0.00"
-    #           , "currency": "GBP"
-    #           , "economy": "sandbox"
-    #         }
-    #     }
-    #
+    //
+    // response:
+    //
+    //     {
+    //       , "real": {
+    //             "balance": "0.00"
+    //           , "currency": "GBP"
+    //           , "economy": "real"
+    //         }
+    //       , "sandbox": {
+    //             "balance": "0.00"
+    //           , "currency": "GBP"
+    //           , "economy": "sandbox"
+    //         }
+    //     }
+    //
     })
 
 Full documentation may be found at <https://developers.betable.com/docs/>.
