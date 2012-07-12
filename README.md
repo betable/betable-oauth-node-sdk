@@ -18,22 +18,18 @@ Usage
 
 **Redirect the player to Betable**:
 
-    betable.authorize( res, state )
+    betable.authorize(res, state)
 
 `state` is optional but recommended.  Provide a string you plan to use below to ensure the player who begins the OAuth protocol is the same one that is redirected back in the next step. When the player is redirected back, we will provide the same `state` that you passed in so you can verify that they match.
 
 **When the player is redirected back to your redirect URI, complete the OAuth protocol to produce an access token**:
 
-    req.session.state = 'abc123'
-    betable.authorize( res, req.session.state )
-    
-    if( req.query.code ) {
-        if( req.session.state !== req.query.state ) {
-            //error
-        }
-        Betable.token( req.query.code, function( error, accessToken ) {
-            if( error ) return res.send( error, 400 )
-            getInformation( accessToken )
+    if (req.query.code && req.session.state === req.query.state) {
+        Betable.token(req.query.code, function(error, accessToken) {
+            if (error) {
+                return res.send(error, 400)
+            }
+            // Use accessToken.
         })
     }
 
@@ -46,7 +42,7 @@ Usage
 
 **Get the player's account, which includes their first and last name**:
 
-    Betable.account( accessToken, function( response ) {
+    Betable.account(accessToken, function(response) {
     //
     // response:
     //
@@ -60,7 +56,7 @@ Usage
 
 **Get the player's wallet, which includes their real-money balance**:
 
-    Betable.wallet( accessToken, function( response ) {
+    Betable.wallet(accessToken, function(response) {
     //
     // response:
     //
