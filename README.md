@@ -41,7 +41,7 @@ Usage
 
     <script src="betable-browser-sdk.js"></script>
     <script>
-    var accessToken = '{{access_token}}';
+    var accessToken = '{{accessToken}}';
     </script>
 
 **Get the player's account, which includes their first and last name**:
